@@ -88,18 +88,24 @@
         transform: scale(1);
       }
     }
+    
   </style>
 </HEAD>
 
-<BODY>
+<BODY onload="a()">
   <div class="box">
     <canvas id="pinkboard"></canvas>
   </div>
-
-  <audio autoplay id="playAudio">
+  <audio id="playAudio" controls>
     <source src="./beautiful-in-white.mp3" type="audio/mp3">
   </audio>
   <script>
+    function a() {
+      console.log("aasa")
+      var x = document.getElementById("playAudio");
+      x.autoplay = true;
+      x.load();
+    }
     /*
    * Settings
    */
